@@ -16,20 +16,20 @@ public class Data {
 
   }
 
-  public boolean validarData(Integer dayV, Integer monthV, Integer yearV) {
+  public boolean validarData(Integer day, Integer month, Integer year) {
 
     if( (month<1 && month >12) || (day<1 && day>31) ||  (year <= 0) ) {
       System.out.println("Valores para dia, mês ou ano são inválidos.") 
     } else {
       boolean flag = false;
-      if(monthV == 4 || monthV==6 || monthV == 9 || monthV==11){
-        if(dayV<=30) {
+      if(month == 4 || month==6 || month == 9 || month==11){
+        if(day<=30) {
           flag = true;
         } else flag = false;  
       }
 
-      if(monthV == 1 || monthV==3 || monthV == 5 || monthV==7 || monthV==8 || monthV==10 || monthV==12){
-        if(dayV<=31){
+      if(month == 1 || month==3 || month == 5 || month==7 || month==8 || month==10 || month==12){
+        if(day<=31){
           flag = true;
         }else{
          flag = false;
@@ -37,7 +37,7 @@ public class Data {
       }
 
       if(month ==2){
-        if(yearV %4 ==0){
+        if(year %4 ==0){
           if(day<=29){
             flag = true;
           }else{
